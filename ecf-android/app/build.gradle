@@ -1,0 +1,243 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+//def keystorePropertiesFile = rootProject.file("keystore.properties")
+//def keystoreProperties = new Properties()
+//
+//keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+//    signingConfigs {
+//        demo {
+//            keyAlias keystoreProperties['rewyndrKeyAlias']
+//            keyPassword keystoreProperties['rewyndrKeyPass']
+//            storeFile file(keystoreProperties['rewyndrKeystoreFile'])
+//            storePassword keystoreProperties['rewyndrKeystorePass']
+//        }
+//        ecf {
+//            keyAlias keystoreProperties['ecfKeyAlias']
+//            keyPassword keystoreProperties['ecfKeyPass']
+//            storeFile file(keystoreProperties['ecfKeystoreFile'])
+//            storePassword keystoreProperties['ecfKeystorePass']
+//        }
+//        zf {
+//            keyAlias keystoreProperties['zfKeyAlias']
+//            keyPassword keystoreProperties['zfKeyPass']
+//            storeFile file(keystoreProperties['zfKeystoreFile'])
+//            storePassword keystoreProperties['zfKeystorePass']
+//        }
+//        omada {
+//            keyAlias keystoreProperties['omadaKeyAlias']
+//            keyPassword keystoreProperties['omadaKeyPass']
+//            storeFile file(keystoreProperties['omadaKeystoreFile'])
+//            storePassword keystoreProperties['omadaKeystorePass']
+//        }
+//        catalyst {
+//            keyAlias keystoreProperties['catalystKeyAlias']
+//            keyPassword keystoreProperties['catalystKeyPass']
+//            storeFile file(keystoreProperties['catalystKeystoreFile'])
+//            storePassword keystoreProperties['catalystKeystorePass']
+//        }
+//        tomanetti {
+//            keyAlias keystoreProperties['tomanettiKeyAlias']
+//            keyPassword keystoreProperties['tomanettiKeyPass']
+//            storeFile file(keystoreProperties['tomanettiKeystoreFile'])
+//            storePassword keystoreProperties['tomanettiKeystorePass']
+//        }
+//        ceramiccolor {
+//            keyAlias keystoreProperties['ceramicColorKeyAlias']
+//            keyPassword keystoreProperties['ceramicColorKeyPass']
+//            storeFile file(keystoreProperties['ceramicColorKeystoreFile'])
+//            storePassword keystoreProperties['ceramicColorKeystorePass']
+//        }
+//        denora {
+//            keyAlias keystoreProperties['denoraKeyAlias']
+//            keyPassword keystoreProperties['denoraKeyPass']
+//            storeFile file(keystoreProperties['denoraKeystoreFile'])
+//            storePassword keystoreProperties['denoraKeystorePass']
+//        }
+//        ncc {
+//            keyAlias keystoreProperties['nccKeyAlias']
+//            keyPassword keystoreProperties['nccKeyPass']
+//            storeFile file(keystoreProperties['nccKeystoreFile'])
+//            storePassword keystoreProperties['nccKeystorePass']
+//        }
+//        cpi {
+//            keyAlias keystoreProperties['cpiKeyAlias']
+//            keyPassword keystoreProperties['cpiKeyPass']
+//            storeFile file(keystoreProperties['cpiKeystoreFile'])
+//            storePassword keystoreProperties['cpiKeystorePass']
+//        }
+//        dlc {
+//            keyAlias keystoreProperties['dlcKeyAlias']
+//            keyPassword keystoreProperties['dlcKeyPass']
+//            storeFile file(keystoreProperties['dlcKeystoreFile'])
+//            storePassword keystoreProperties['dlcKeystorePass']
+//        }
+//    }
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.rewyndr"
+        minSdkVersion 26
+        targetSdkVersion 28
+        versionCode 33
+        versionName "0.1.19"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        debug {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions "customer"
+    productFlavors {
+//        demo {
+//            dimension "customer"
+//            applicationIdSuffix ".rewyndr"
+//            buildConfigField("String", "API_BASE_URL_ST", DEMO_ST_API_BASE_URL)
+//            buildConfigField("String", "API_BASE_URL_PR", DEMO_PR_API_BASE_URL)
+            //    signingConfig signingConfigs.demo
+//        }
+
+//        ecf {
+//            dimension "customer"
+//            applicationIdSuffix ".ecf"
+//            buildConfigField("String", "API_BASE_URL_ST", ECF_ST_API_BASE_URL)
+//            buildConfigField("String", "API_BASE_URL_PR", ECF_PR_API_BASE_URL)
+//            signingConfig signingConfigs.ecf
+//        }
+//
+//        zf {
+//            dimension "customer"
+//            applicationIdSuffix ".zf"
+//            buildConfigField("String", "API_BASE_URL_ST", ZF_ST_API_BASE_URL)
+//            buildConfigField("String", "API_BASE_URL_PR", ZF_PR_API_BASE_URL)
+//            signingConfig signingConfigs.zf
+//        }
+//
+//        omada {
+//            dimension "customer"
+//            applicationIdSuffix ".customer.omada"
+//            buildConfigField("String", "API_BASE_URL_ST", OMADA_ST_API_BASE_URL)
+//            buildConfigField("String", "API_BASE_URL_PR", OMADA_PR_API_BASE_URL)
+//            signingConfig signingConfigs.omada
+//        }
+//
+//        catalyst {
+//            dimension "customer"
+//            applicationIdSuffix ".customer.catalyst"
+//            buildConfigField("String", "API_BASE_URL_ST", CATALYST_ST_API_BASE_URL)
+//            buildConfigField("String", "API_BASE_URL_PR", CATALYST_PR_API_BASE_URL)
+//            signingConfig signingConfigs.catalyst
+//        }
+//
+//        tomanetti {
+//            dimension "customer"
+//            applicationIdSuffix ".customer.tomanetti"
+//            buildConfigField("String", "API_BASE_URL_ST", TOMANETTI_ST_API_BASE_URL)
+//            buildConfigField("String", "API_BASE_URL_PR", TOMANETTI_PR_API_BASE_URL)
+//            signingConfig signingConfigs.catalyst
+//        }
+//
+//        ceramiccolor {
+//            dimension "customer"
+//            applicationIdSuffix ".customer.ceramiccolor"
+//            buildConfigField("String", "API_BASE_URL_ST", CERAMICCOLOR_ST_API_BASE_URL)
+//            buildConfigField("String", "API_BASE_URL_PR", CERAMICCOLOR_PR_API_BASE_URL)
+//            signingConfig signingConfigs.ceramiccolor
+//        }
+//
+        denora {
+            dimension "customer"
+            applicationIdSuffix ".customer.denora"
+            buildConfigField("String", "API_BASE_URL_ST", DENORA_ST_API_BASE_URL)
+            buildConfigField("String", "API_BASE_URL_PR", DENORA_PR_API_BASE_URL)
+           //signingConfig signingConfigs.denora
+        }
+//
+//        ncc {
+//            dimension "customer"
+//            applicationIdSuffix ".customer.ncc"
+//            buildConfigField("String", "API_BASE_URL_ST", NCC_ST_API_BASE_URL)
+//            buildConfigField("String", "API_BASE_URL_PR", NCC_PR_API_BASE_URL)
+//            signingConfig signingConfigs.ncc
+//        }
+//
+//        cpi {
+//            dimension "customer"
+//            applicationIdSuffix ".customer.cpi"
+//            buildConfigField("String", "API_BASE_URL_ST", CPI_ST_API_BASE_URL)
+//            buildConfigField("String", "API_BASE_URL_PR", CPI_PR_API_BASE_URL)
+//            signingConfig signingConfigs.cpi
+//        }
+//
+        dlc {
+            dimension "customer"
+            applicationIdSuffix ".customer.dlc"
+            buildConfigField("String", "API_BASE_URL_ST", DLC_ST_API_BASE_URL)
+            buildConfigField("String", "API_BASE_URL_PR", DLC_PR_API_BASE_URL)
+            //    signingConfig signingConfigs.dlc
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    implementation 'com.android.support:appcompat-v7:28.1.0'
+    implementation 'com.android.support:design:28.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.github.jkwiecien:EasyImage:2.1.0'
+    implementation 'com.github.woxthebox:draglistview:1.6.3'
+    implementation 'com.google.android.exoplayer:exoplayer:2.8.4'
+    implementation 'com.google.code.gson:gson:2.7'
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation "androidx.fragment:fragment-ktx:1.2.5"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt 'com.github.bumptech.glide:compiler:4.9.0'
+    kapt 'com.jakewharton:butterknife-compiler:10.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "androidx.core:core-ktx:1.6.0"
+    implementation 'androidx.lifecycle:lifecycle-common:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.2.0'
+    implementation 'android.arch.lifecycle:extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation 'com.squareup.okhttp3:okhttp:4.3.1'
+    implementation "com.squareup.retrofit2:converter-moshi:2.4.0"
+    implementation "com.squareup.moshi:moshi-kotlin:1.11.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.4.0"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.5'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.github.MikeOrtiz:TouchImageView:3.0.1'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:1.11.0"
+    kapt "com.android.databinding:compiler:3.1.4"
+}
+repositories {
+    mavenCentral()
+}

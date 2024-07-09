@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="@color/brandLighterBackground">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    style="@style/ContentDetailContainer"
+                    android:id="@+id/add_tag_instructions_container"
+                    android:visibility="gone"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="0dp">
+                    <TextView
+                        style="@style/ContentDetailValue"
+                        android:id="@+id/add_tag_instructions"
+                        android:textStyle="italic"
+                        android:text="@string/new_tag_instructions"/>
+                </LinearLayout>
+                <androidx.fragment.app.FragmentContainerView android:id="@+id/imageFragment"
+                    android:name="com.rewyndr.rewyndr.fragments.RewyndrImageFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"/>
+                <com.rewyndr.rewyndr.view.VerticalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height= "match_parent">
+                    <LinearLayout
+                        android:id="@+id/step_content_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            style="@style/ContentDetailContainer"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:background="@color/white"
+                            android:layout_marginBottom="0dp"
+                            android:elevation="2dp">
+                            <TextView
+                                style="@style/ContentDetailLabel"
+                                android:text="@string/step_description_label"/>
+                            <TextView
+                                style="@style/ContentDetailValue"
+                                android:id="@+id/step_description"
+                                android:autoLink="web"/>
+                        </LinearLayout>
+                        <androidx.fragment.app.FragmentContainerView android:id="@+id/annotations_list"
+                            android:name="com.rewyndr.rewyndr.fragments.ImageAnnotationListFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                        <androidx.fragment.app.FragmentContainerView android:id="@+id/tag_editor"
+                            android:name="com.rewyndr.rewyndr.fragments.TagEditorFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                </com.rewyndr.rewyndr.view.VerticalScrollView>
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/color_picker_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/overlay"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/color_picker"
+                    android:name="com.rewyndr.rewyndr.fragments.ColorPickerFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/zoomImageFragment"
+                android:name="com.rewyndr.rewyndr.fragments.ZoomedImageFragment"
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.rewyndr.rewyndr.activity.AnnotationFormActivity"
+    tools:ignore="MergeRootFrame" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/FormFieldContainer"
+                android:id="@+id/annotation_content_input_container">
+                <EditText
+                    style="@style/FormFieldTextArea"
+                    android:id="@+id/annotation_content_input"
+                    android:hint="@string/annotation_content_label"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/annotation_attachment_input_container"
+                android:layout_below="@id/annotation_content_input_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FormSpinnerLabel"
+                    android:text="@string/annotation_record_audio_label" />
+
+                <Chronometer
+                    android:id="@+id/chronometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:format="00:%s"
+                    android:textSize="20dp" />
+
+                <ImageButton
+                    android:id="@+id/record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/annotation_record_audio_label"
+                    android:src="@drawable/recorder_record"/>
+            </LinearLayout>
+
+            <Button
+                style="@style/FormButton"
+                android:id="@+id/save_annotation_button"
+                android:text="@string/action_save_comment"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

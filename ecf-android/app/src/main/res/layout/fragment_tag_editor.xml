@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tag_form"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/brandBackground"
+    android:paddingTop="1dp"
+    android:paddingBottom="1dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    tools:context=".fragments.TagEditorFragment">
+    <LinearLayout
+        style="@style/ContentDetailContainer"
+        android:padding="@dimen/activity_vertical_margin"
+        android:background="@color/white"
+        android:layout_marginBottom="0dp">
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/FormFieldContainer"
+            android:id="@+id/tag_name_input_container">
+            <EditText
+                style="@style/FormFieldTextInput"
+                android:inputType="textFilter|textCapSentences"
+                android:id="@+id/tag_name_input"
+                android:hint="@string/tag_name_label"
+                android:autofillHints="no" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/open_color_picker_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/set_tag_color" />
+            <View
+                android:id="@+id/color_swatch"
+                android:layout_margin="10dp"
+                android:layout_width="80dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style="@style/FormSpinnerLabel"
+                android:text="@string/tag_icon_label"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:textSize="12sp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tag_safety_icons"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginBottom="15dp"
+                android:padding="2dp"/>
+        </LinearLayout>
+        <Button
+            style="@style/FormButton"
+            android:id="@+id/save_tag_button"
+            android:text="@string/action_save_tag"/>
+    </LinearLayout>
+</LinearLayout>

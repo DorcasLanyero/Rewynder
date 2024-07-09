@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name">Rewyndr</string>
+    <string name="version_title">App Version</string>
+    <string name="change_password_title">Change Password</string>
+
+    <!-- Generic -->
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="slogan">Safety. Productivity. Knowledge.</string>
+    <string name="powered_by">visually powered by Rewyndr</string>
+
+    <!-- User -->
+    <string name="action_update_password">Update Password</string>
+    <string name="password_label">New Password</string>
+    <string name="password_confirmation_label">Confirm New Password</string>
+
+    <!-- Community -->
+    <string name="community_details_heading">Details</string>
+    <string name="community_procedures_heading">Procedures</string>
+    <string name="community_no_procedures">No procedures have been added to this community.</string>
+    <string name="community_name_label">Name</string>
+    <string name="community_location_label">Location</string>
+    <string name="community_machine_number_label">Machine Number</string>
+    <string name="community_description_label">Description</string>
+    <string name="community_delete_dialog_title">Delete this community?</string>
+    <string name="community_delete_dialog_message">All community data will be lost. This action cannot be undone.</string>
+    <string name="action_add_community">Add Community</string>
+    <string name="action_edit_community">Edit Community</string>
+    <string name="action_save_community">Save Community</string>
+    <string name="action_delete_community">Delete Community</string>
+    <string name="procedure_selection_prompt">Select an option:</string>
+    <string name="edit_procedures">View/Edit Procedures</string>
+    <string name="view_procedure_history">View Procedure History</string>
+
+    <!-- Procedure -->
+    <string name="action_add_procedure">Add Procedure</string>
+    <string name="action_save_procedure">Save Procedure</string>
+    <string name="action_edit_procedure">Edit Procedure</string>
+    <string name="action_delete_procedure">Delete Procedure</string>
+    <string name="procedure_details_heading">Details</string>
+    <string name="procedure_steps_heading">Steps</string>
+    <string name="procedure_no_steps">No steps have been added to this procedure.</string>
+    <string name="procedure_name_label">Name</string>
+    <string name="procedure_status_label">Status</string>
+    <string name="procedure_description_label">Description</string>
+    <string name="procedure_delete_dialog_title">Delete this procedure?</string>
+    <string name="procedure_delete_dialog_message">All procedure data will be lost. This action cannot be undone.</string>
+    <string name="procedure_reorder_instructions">Press and hold the \"=\" icon to drag and reorder steps.</string>
+    <string name="operator_dry_run">Begin Operator Preview</string>
+    <string name="procedure_step_viewholder_text">%1$d) %2$s</string>
+
+    <!-- Step -->
+    <string name="action_add_step">Add Step</string>
+    <string name="action_edit_step">Edit Step</string>
+    <string name="action_delete_step">Delete Step</string>
+    <string name="action_save_step">Save Step</string>
+    <string name="save_to_gallery">Save Image</string>
+    <string name="state_saving_step">Saving Step&#8230;</string>
+    <string name="step_description_label">Instructions</string>
+    <string name="step_image_label">Tap below to select an image</string>
+    <string name="step_require_image_on_pass_label">Require image on \"pass\"</string>
+    <string name="uploading_image_title">Saving Step</string>
+    <string name="uploading_image">Step image upload in progress&#8230;</string>
+    <string name="step_name_label">Name</string>
+    <string name="step_delete_dialog_title">Delete this step?</string>
+    <string name="step_delete_dialog_message">All step data will be lost. This action cannot be undone.</string>
+
+    <!-- Executions -->
+    <string name="step_pass">Pass</string>
+    <string name="step_fail">Fail</string>
+    <string name="step_pass_result">Passed!</string>
+    <string name="step_fail_result">Failed!</string>
+    <string name="step_number">Step #0</string>
+    <string name="step_instructions">Time to do stuff...</string>
+    <string name="step_continue">Continue</string>
+    <string name="procedure_completed">You have completed this Procedure. To save and finish the process, press \"Submit\". To discard the results of this procedure, press \"Delete\".</string>
+    <string name="procedure_submit">Submit</string>
+    <string name="procedure_delete">Delete</string>
+
+    <!-- Tag -->
+    <string name="action_add_tag">Add Tag</string>
+    <string name="action_delete_tag">Delete Tag</string>
+    <string name="action_edit_tag">Edit Tag</string>
+    <string name="action_save_tag">Save Tag</string>
+    <string name="new_tag_instructions">Tap once to create a box tag. Press on target object and hold to create a smart tag.</string>
+    <string name="smart_tag_instructions">Tap to expand your selection.</string>
+    <string name="box_tag_instructions">Use boundary handles to adjust your selection.</string>
+    <string name="tag_name_label">Name</string>
+    <string name="tag_icon_label">Choose safety icon (optional)</string>
+    <string name="step_delete_tag_title">Delete this tag?</string>
+    <string name="step_delete_tag_message">All tag data will be lost. This action cannot be undone.</string>
+
+    <!-- Annotation -->
+    <string name="action_add_comment">Add Comment</string>
+    <string name="action_save_comment">Save Comment</string>
+    <string name="annotation_content_label">Comment</string>
+    <string name="annotation_list_heading">Comments</string>
+    <string name="annotation_record_audio_label">Record audio (optional)</string>
+    <string name="comments_count">Comments (%d)</string>
+
+    <!-- Procedure History -->
+    <string name="procedure_history">Procedure History</string>
+    <string name="search_procedures">Search Procedures...</string>
+    <string name="procedure_history_instructions">Press on a Procedure to view completed Procedures</string>
+    <string name="no_procedure_history">No procedures found</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="set_tag_color">Set Tag Color</string>
+    <string name="zoom_in">Zoom in</string>
+    <string name="zoom_out">Zoom out</string>
+</resources>

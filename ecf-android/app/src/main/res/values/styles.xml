@@ -1,0 +1,192 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="actionBarStyle">@style/ActionBar</item>
+        <item name="itemTextAppearance">@style/ItemTextAppearance</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationStyle</item>
+    </style>
+
+    <style name="AppThemeNoTitleBar" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="background">@drawable/action_bar</item>
+        <item name="titleTextStyle">@style/ActionBar.TitleTextStyle</item>
+    </style>
+
+    <style name="ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ItemTextAppearance" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">17dp</item>
+    </style>
+
+    <style name="WindowAnimationStyle">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <!-- CONTENT -->
+
+    <style name="ContentContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="ContentHeader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/brandBackground</item>
+        <item name="android:padding">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <style name="ContentHeading">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="ContentBody">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:paddingBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:paddingLeft">@dimen/activity_vertical_margin</item>
+        <item name="android:paddingRight">@dimen/activity_vertical_margin</item>
+        <item name="android:paddingTop">@dimen/activity_vertical_margin</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="ContentDetailContainer">
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="ContentDetailLabel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/brandBackground</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">9dp</item>
+    </style>
+
+    <style name="ContentDetailValue">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:color">@color/black</item>
+    </style>
+
+    <!-- FORMS -->
+
+    <style name="FormFieldContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="FormFieldTextInput">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">textFilter</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:maxWidth">300dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="FormFieldTextArea" parent="FormFieldTextInput">
+        <item name="android:inputType">textMultiLine|textCapSentences</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:maxLines">10</item>
+        <item name="android:minLines">1</item>
+        <item name="android:gravity">top|left</item>
+    </style>
+
+    <style name="FormSpinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:background">@color/brandLightBackground</item>
+        <item name="android:paddingBottom">11dp</item>
+        <item name="android:paddingTop">11dp</item>
+        <item name="android:spinnerMode">dropdown</item>
+    </style>
+
+    <style name="FormSpinnerLabel" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/input_label_vertical_spacing</item>
+        <item name="android:paddingLeft">@dimen/input_label_horizontal_spacing</item>
+        <item name="android:paddingRight">@dimen/input_label_horizontal_spacing</item>
+    </style>
+
+    <style name="FormButton" parent="android:TextAppearance.Small">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@color/brandAccent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PassButton" parent="android:TextAppearance.Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@color/passGreen</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="FailButton" parent="android:TextAppearance.Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@color/failRed</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="stepInstructions" parent="android:TextAppearance.Large">
+
+    </style>
+
+    <!-- Executions -->
+    <style name="ExecutionDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/ExecutionSaveButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/ExecutionDeleteButton</item>
+    </style>
+
+    <style name="ExecutionSaveButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/passGreen</item>
+        <item name="rippleColor">#a0a0a0</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_weight">10</item>
+    </style>
+
+    <style name="ExecutionDeleteButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/failRed</item>
+        <item name="rippleColor">#a0a0a0</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_weight">10</item>
+    </style>
+
+    <style name="Widget.AppThemeNoTitleBar.MyView" parent="">
+        <item name="android:background">@color/gray_400</item>
+        <item name="exampleColor">@color/light_blue_400</item>
+    </style>
+</resources>

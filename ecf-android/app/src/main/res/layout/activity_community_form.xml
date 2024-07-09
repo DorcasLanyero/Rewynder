@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.rewyndr.rewyndr.activity.CommunityFormActivity"
+    tools:ignore="MergeRootFrame" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/FormFieldContainer"
+                android:id="@+id/community_name_input_container">
+                <EditText
+                    style="@style/FormFieldTextInput"
+                    android:inputType="textFilter|textCapSentences"
+                    android:id="@+id/community_name_input"
+                    android:hint="@string/community_name_label">
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/community_featured_image_container"
+                android:padding="2dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/community_name_input_container"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/FormSpinnerLabel"
+                    android:text="Featured Image"
+                    android:textSize="12sp"/>
+                <TextView
+                    style="@style/FormSpinnerLabel"
+                    android:text="@string/step_image_label"
+                    android:textSize="12sp"/>
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:padding="1dp"
+                    android:background="@color/brandBackground">
+                    <com.rewyndr.rewyndr.view.SquareImageView
+                        android:id="@+id/featured_image_input"
+                        android:background="@color/white"
+                        android:scaleType="centerCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/community_location_input_container"
+                android:layout_below="@id/community_featured_image_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FormSpinnerLabel"
+                    android:text="@string/community_location_label" />
+
+                <Spinner
+                    style="@style/FormSpinner"
+                    android:id="@+id/community_location_input"/>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/FormFieldContainer"
+                android:id="@+id/community_machine_number_input_container"
+                android:layout_below="@id/community_location_input_container">
+                <EditText
+                    style="@style/FormFieldTextInput"
+                    android:id="@+id/community_machine_number_input"
+                    android:hint="@string/community_machine_number_label"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/FormFieldContainer"
+                android:id="@+id/community_description_input_container"
+                android:layout_below="@id/community_machine_number_input_container">
+                <EditText
+                    style="@style/FormFieldTextArea"
+                    android:id="@+id/community_description_input"
+                    android:hint="@string/community_description_label"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                style="@style/FormButton"
+                android:id="@+id/save_community_button"
+                android:text="@string/action_save_community"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

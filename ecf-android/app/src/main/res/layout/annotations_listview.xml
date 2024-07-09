@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/annotation_list_heading"
+        android:text="@string/annotation_list_heading"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:padding="@dimen/activity_horizontal_margin" />
+    <ListView
+        android:id="@+id/step_annotations_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="10dp"
+        android:divider="@android:color/transparent"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="10dp"
+        android:scrollbarThumbVertical="@android:color/transparent"/>
+</LinearLayout>
